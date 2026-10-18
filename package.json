@@ -1,6 +1,6 @@
 {
   "name": "@local/dsh-tide-whale-pet",
-  "version": "2.6.1",
+  "version": "2.6.2",
   "private": true,
   "type": "module",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "cordis",
     "whale"
   ],
-  "description": "Xixi, a three-outfit, nine-action blue whale desktop pet using the provided pack: original 24-frame walk/run to avoid RIFE leg warping, 96-frame RIFE for other actions, root-locked body.",
+  "description": "Xixi, a three-outfit, nine-action blue whale desktop pet using the provided pack; only idle is RIFE-interpolated, while every gesture action uses the original 24 frames to avoid duplicated hands and legs.",
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",

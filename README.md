@@ -18,8 +18,7 @@ The character artwork comes from the provided **648-frame sprite pack** (`3 outf
 - Drag-and-drop, click reactions, auto-idle behavior, per-skin portraits and thumbnails.
 - **Loop seams optimized** by rotating each loop to its smoothest end-to-start pair.
 - **Root locked** to a fixed anchor so the character does not wander across the desktop; jump keeps its vertical movement.
-- **Walk / run use the original 24 frames**, not RIFE, so the legs keep crisp stepping instead of being warped by interpolation.
-- The other actions use RIFE 4.9 to expand 24 source frames to **96 frames**, with a 15fps or 20fps presentation.
+- **Only idle uses RIFE 4.9** to expand its 24 source frames to 96; all gesture actions (walk, run, jump, wave, sit, sleep, dance, surprise) use the original 24 frames. This avoids the duplicated hands/legs RIFE produces when limbs cross or occlude the body.
 - Idle sheet is pinned in the client cache; returning from a one-shot does not flash a loading card.
 - Assets are served either through Harness's authenticated `/api/file` route (when the Host's asset-root injection is present) or through the plugin's own read-only `/api/tide-whale-pet/assets/...` route on first load.
 - The Host route is whitelisted to static `.webp`/`.json` files under `assets/`; it is not a general file server. No build step.
@@ -57,18 +56,18 @@ Preferences (position, outfit, auto-play) are stored in `localStorage` under `ds
 | idle | 24 | 96 | loop | 15 | 6.4 s |
 | walk | 24 | 24 | loop | 12 | 2.0 s |
 | run | 24 | 24 | loop | 12 | 2.0 s |
-| jump | 24 | 96 | once | 20 | 4.8 s |
-| wave | 24 | 96 | once | 15 | 6.4 s |
-| sit | 24 | 96 | loop | 15 | 6.4 s |
-| sleep | 24 | 96 | loop | 15 | 6.4 s |
-| dance | 24 | 96 | loop | 15 | 6.4 s |
-| surprise | 24 | 96 | once | 20 | 4.8 s |
+| jump | 24 | 24 | once | 12 | 2.0 s |
+| wave | 24 | 24 | once | 12 | 2.0 s |
+| sit | 24 | 24 | loop | 12 | 2.0 s |
+| sleep | 24 | 24 | loop | 12 | 2.0 s |
+| dance | 24 | 24 | loop | 12 | 2.0 s |
+| surprise | 24 | 24 | once | 12 | 2.0 s |
 
-Walk and run intentionally stay at 24 frames: RIFE interpolates legs poorly at this art style, and the crisp original gait is preferable to a blurry one. The rest of the actions have four times as many frames.
+Only idle is interpolated. The eight gesture actions deliberately stay at 24 frames because RIFE duplicates or warps hands and legs when a limb crosses the body (the clearest case is the cover-face surprise action). Crisp original limbs are preferable to a higher frame count with extra hands.
 
 ### Root calibration
 
-For every action, the first and last frames are used to establish a fixed target. Frames are shifted to that target instead of being calibrated relative to the previous frame, so offsets cannot accumulate. Walk/run lock horizontal position and keep a small vertical gait bob; jump locks horizontal position and keeps only up/down movement.
+For every action, the first and last frames are used to establish a fixed target. Frames are shifted to that target instead of being calibrated relative to the previous frame, so offsets cannot accumulate. Walk/run lock horizontal position and keep a small vertical gait bob; jump locks horizontal position and keeps only up/down movement; the other 24-frame actions are locked on both axes.
 
 ## Project layout
 
@@ -90,13 +89,13 @@ For every action, the first and last frames are used to establish a fixed target
 └── THIRD_PARTY_NOTICES.md
 ```
 
-The client canvas reads one 320×320 cell at a time from the 8-column sheets. Sheets with 96 frames are 2560×3840; walk/run sheets with 24 frames are 2560×960. Both stay below common 4096-pixel texture limits.
+The client canvas reads one 320×320 cell at a time from the 8-column sheets. The idle sheet with 96 frames is 2560×3840; the 24-frame action sheets are 2560×960. Both stay below common 4096-pixel texture limits.
 
 ## Artwork and RIFE
 
 The sprite artwork is the supplied 648-frame pack, not a redraw. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the artwork/attribution caveat.
 
-The 96-frame variants were generated offline with the **RIFE 4.9** ONNX model; the model itself is not distributed in this repository. Only the resulting sprite sheets are bundled.
+The idle 96-frame variant was generated offline with the **RIFE 4.9** ONNX model; the model itself is not distributed in this repository. All gesture actions use the original pack frames. Only the resulting sprite sheets are bundled.
 
 ## Development
 

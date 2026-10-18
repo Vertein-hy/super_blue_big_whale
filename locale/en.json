@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Xixi · Blue Whale Pet",
-    "description": "A three-outfit blue whale companion using the provided pack: original 24-frame walk/run, 96-frame RIFE for other actions, and a root-locked body."
+    "description": "A three-outfit blue whale desktop pet using the provided pack; only idle is RIFE-interpolated, while gesture actions keep their original 24 frames."
   }
 }

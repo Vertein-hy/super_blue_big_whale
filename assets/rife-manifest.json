@@ -108,116 +108,84 @@
     },
     "knit/sit": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": false,
       "foot_shifts": null,
       "foot_anchor_range": null,
       "columns": 8,
-      "rows": 12,
-      "bytes": 2344666,
-      "loop_start": 84,
+      "rows": 3,
+      "bytes": 540804,
+      "loop_start": 21,
       "body_center_shift": 1,
       "closest_loop_seam_diff": 7.97,
       "root_lock": {
         "x": 160,
         "y": 205,
-        "jump_y_free": false,
-        "first_anchor": [
-          159.91499892521455,
-          204.8384607066206
-        ],
-        "last_anchor": [
-          159.8444813514994,
-          204.76949456626897
-        ]
+        "jump_y_free": false
       }
     },
     "knit/sleep": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": false,
       "foot_shifts": null,
       "foot_anchor_range": null,
       "columns": 8,
-      "rows": 12,
-      "bytes": 1991104,
-      "loop_start": 50,
+      "rows": 3,
+      "bytes": 466068,
+      "loop_start": 13,
       "body_center_shift": 1,
       "closest_loop_seam_diff": 8.95,
       "root_lock": {
         "x": 160,
         "y": 208,
-        "jump_y_free": false,
-        "first_anchor": [
-          166.8772628576716,
-          208.33163953883448
-        ],
-        "last_anchor": [
-          167.09450325789834,
-          208.18997818885478
-        ]
+        "jump_y_free": false
       }
     },
     "knit/dance": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": false,
       "foot_shifts": null,
       "foot_anchor_range": null,
       "columns": 8,
-      "rows": 12,
-      "bytes": 2835532,
-      "loop_start": 8,
+      "rows": 3,
+      "bytes": 667882,
+      "loop_start": 2,
       "body_center_shift": 1,
       "closest_loop_seam_diff": 16.42,
       "root_lock": {
         "x": 160,
-        "y": 167,
-        "jump_y_free": false,
-        "first_anchor": [
-          161.32689703389963,
-          167.49216799797705
-        ],
-        "last_anchor": [
-          161.04695317390937,
-          167.12995153065205
-        ]
+        "y": 166,
+        "jump_y_free": false
       }
     },
     "knit/jump": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": false,
       "foot_shifts": null,
       "foot_anchor_range": null,
       "columns": 8,
-      "rows": 12,
-      "bytes": 2547868,
+      "rows": 3,
+      "bytes": 614292,
       "loop_start": null,
       "body_center_shift": 1,
       "closest_loop_seam_diff": null,
       "root_lock": {
         "x": 160,
-        "y": 174,
-        "jump_y_free": true,
-        "first_anchor": [
-          182.09340370044094,
-          172.93819615946913
-        ],
-        "last_anchor": [
-          171.03467208509807,
-          174.67778366874492
-        ]
+        "y": "free",
+        "jump_y_free": true
       }
     },
     "knit/wave": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": true,
       "foot_shifts": [
         -13,
@@ -250,29 +218,21 @@
         154.51
       ],
       "columns": 8,
-      "rows": 12,
-      "bytes": 2671348,
+      "rows": 3,
+      "bytes": 625022,
       "loop_start": null,
       "body_center_shift": 0,
       "closest_loop_seam_diff": null,
       "root_lock": {
         "x": 160,
-        "y": 172,
-        "jump_y_free": false,
-        "first_anchor": [
-          162.28153876111634,
-          171.9196323134536
-        ],
-        "last_anchor": [
-          161.60182290203932,
-          171.7430947135895
-        ]
+        "y": 171,
+        "jump_y_free": false
       }
     },
     "knit/surprise": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": true,
       "foot_shifts": [
         -1,
@@ -305,23 +265,15 @@
         154.34
       ],
       "columns": 8,
-      "rows": 12,
-      "bytes": 2531466,
+      "rows": 3,
+      "bytes": 613126,
       "loop_start": null,
       "body_center_shift": 1,
       "closest_loop_seam_diff": null,
       "root_lock": {
         "x": 160,
-        "y": 172,
-        "jump_y_free": false,
-        "first_anchor": [
-          161.88881948122508,
-          171.78626117520966
-        ],
-        "last_anchor": [
-          161.9650087032432,
-          171.4184413497503
-        ]
+        "y": 171,
+        "jump_y_free": false
       }
     },
     "cape/idle": {
@@ -423,116 +375,84 @@
     },
     "cape/sit": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": false,
       "foot_shifts": null,
       "foot_anchor_range": null,
       "columns": 8,
-      "rows": 12,
-      "bytes": 2432520,
-      "loop_start": 84,
+      "rows": 3,
+      "bytes": 546538,
+      "loop_start": 13,
       "body_center_shift": 1,
       "closest_loop_seam_diff": 4.65,
       "root_lock": {
         "x": 160,
-        "y": 194,
-        "jump_y_free": false,
-        "first_anchor": [
-          160.76064891157222,
-          194.1396944339032
-        ],
-        "last_anchor": [
-          160.68860894881928,
-          194.18278704874257
-        ]
+        "y": 195,
+        "jump_y_free": false
       }
     },
     "cape/sleep": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": false,
       "foot_shifts": null,
       "foot_anchor_range": null,
       "columns": 8,
-      "rows": 12,
-      "bytes": 1996000,
-      "loop_start": 82,
+      "rows": 3,
+      "bytes": 471784,
+      "loop_start": 21,
       "body_center_shift": 2,
       "closest_loop_seam_diff": 3.23,
       "root_lock": {
         "x": 160,
         "y": 202,
-        "jump_y_free": false,
-        "first_anchor": [
-          161.58684999090568,
-          202.40180339180782
-        ],
-        "last_anchor": [
-          161.58695200025787,
-          202.38605620386934
-        ]
+        "jump_y_free": false
       }
     },
     "cape/dance": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": false,
       "foot_shifts": null,
       "foot_anchor_range": null,
       "columns": 8,
-      "rows": 12,
-      "bytes": 2877810,
-      "loop_start": 8,
+      "rows": 3,
+      "bytes": 661830,
+      "loop_start": 2,
       "body_center_shift": 1,
       "closest_loop_seam_diff": 6.25,
       "root_lock": {
         "x": 160,
         "y": 176,
-        "jump_y_free": false,
-        "first_anchor": [
-          160.02609034192193,
-          176.36153132204595
-        ],
-        "last_anchor": [
-          159.95694428240301,
-          176.3025047233278
-        ]
+        "jump_y_free": false
       }
     },
     "cape/jump": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": false,
       "foot_shifts": null,
       "foot_anchor_range": null,
       "columns": 8,
-      "rows": 12,
-      "bytes": 2844130,
+      "rows": 3,
+      "bytes": 653730,
       "loop_start": null,
       "body_center_shift": 1,
       "closest_loop_seam_diff": null,
       "root_lock": {
         "x": 160,
-        "y": 176,
-        "jump_y_free": true,
-        "first_anchor": [
-          171.86724597050153,
-          175.46949166520568
-        ],
-        "last_anchor": [
-          167.4239092905745,
-          176.24588579771566
-        ]
+        "y": "free",
+        "jump_y_free": true
       }
     },
     "cape/wave": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": true,
       "foot_shifts": [
         -1,
@@ -565,29 +485,21 @@
         154.49
       ],
       "columns": 8,
-      "rows": 12,
-      "bytes": 2669204,
+      "rows": 3,
+      "bytes": 622654,
       "loop_start": null,
       "body_center_shift": 1,
       "closest_loop_seam_diff": null,
       "root_lock": {
         "x": 160,
-        "y": 175,
-        "jump_y_free": false,
-        "first_anchor": [
-          159.0282450771884,
-          174.9620633630528
-        ],
-        "last_anchor": [
-          158.78387306455005,
-          174.87399441435065
-        ]
+        "y": 174,
+        "jump_y_free": false
       }
     },
     "cape/surprise": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": true,
       "foot_shifts": [
         -2,
@@ -620,23 +532,15 @@
         161.82
       ],
       "columns": 8,
-      "rows": 12,
-      "bytes": 2742626,
+      "rows": 3,
+      "bytes": 630908,
       "loop_start": null,
       "body_center_shift": 1,
       "closest_loop_seam_diff": null,
       "root_lock": {
         "x": 160,
         "y": 176,
-        "jump_y_free": false,
-        "first_anchor": [
-          160.85915432979465,
-          176.516366215816
-        ],
-        "last_anchor": [
-          160.97952461821455,
-          176.3778937852706
-        ]
+        "jump_y_free": false
       }
     },
     "whale/idle": {
@@ -738,116 +642,84 @@
     },
     "whale/sit": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": false,
       "foot_shifts": null,
       "foot_anchor_range": null,
       "columns": 8,
-      "rows": 12,
-      "bytes": 2219216,
-      "loop_start": 44,
+      "rows": 3,
+      "bytes": 507826,
+      "loop_start": 11,
       "body_center_shift": 1,
       "closest_loop_seam_diff": 3.83,
       "root_lock": {
         "x": 160,
         "y": 203,
-        "jump_y_free": false,
-        "first_anchor": [
-          159.32113137951657,
-          202.85212475715974
-        ],
-        "last_anchor": [
-          159.41925323420116,
-          202.9520174054481
-        ]
+        "jump_y_free": false
       }
     },
     "whale/sleep": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": false,
       "foot_shifts": null,
       "foot_anchor_range": null,
       "columns": 8,
-      "rows": 12,
-      "bytes": 2273312,
-      "loop_start": 80,
+      "rows": 3,
+      "bytes": 531600,
+      "loop_start": 20,
       "body_center_shift": 1,
       "closest_loop_seam_diff": 4.19,
       "root_lock": {
         "x": 160,
         "y": 202,
-        "jump_y_free": false,
-        "first_anchor": [
-          161.8837635127768,
-          202.01983734299898
-        ],
-        "last_anchor": [
-          162.01576158966523,
-          202.00094272957503
-        ]
+        "jump_y_free": false
       }
     },
     "whale/dance": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": false,
       "foot_shifts": null,
       "foot_anchor_range": null,
       "columns": 8,
-      "rows": 12,
-      "bytes": 2811872,
-      "loop_start": 44,
+      "rows": 3,
+      "bytes": 651490,
+      "loop_start": 11,
       "body_center_shift": 1,
       "closest_loop_seam_diff": 14.46,
       "root_lock": {
         "x": 160,
         "y": 187,
-        "jump_y_free": false,
-        "first_anchor": [
-          163.87001613486188,
-          187.05017837580777
-        ],
-        "last_anchor": [
-          164.35874818258765,
-          186.96616807440827
-        ]
+        "jump_y_free": false
       }
     },
     "whale/jump": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": false,
       "foot_shifts": null,
       "foot_anchor_range": null,
       "columns": 8,
-      "rows": 12,
-      "bytes": 2576642,
+      "rows": 3,
+      "bytes": 608504,
       "loop_start": null,
       "body_center_shift": 1,
       "closest_loop_seam_diff": null,
       "root_lock": {
         "x": 160,
-        "y": 184,
-        "jump_y_free": true,
-        "first_anchor": [
-          168.61357862895505,
-          182.49901223760932
-        ],
-        "last_anchor": [
-          165.96680206088385,
-          185.1634920077639
-        ]
+        "y": "free",
+        "jump_y_free": true
       }
     },
     "whale/wave": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": true,
       "foot_shifts": [
         -2,
@@ -880,29 +752,21 @@
         167.58
       ],
       "columns": 8,
-      "rows": 12,
-      "bytes": 2585250,
+      "rows": 3,
+      "bytes": 627534,
       "loop_start": null,
       "body_center_shift": 1,
       "closest_loop_seam_diff": null,
       "root_lock": {
         "x": 160,
-        "y": 183,
-        "jump_y_free": false,
-        "first_anchor": [
-          158.372763580097,
-          182.99280963687931
-        ],
-        "last_anchor": [
-          157.78846252157368,
-          183.53965486893628
-        ]
+        "y": 184,
+        "jump_y_free": false
       }
     },
     "whale/surprise": {
       "source_frames": 24,
-      "display_frames": 96,
-      "rife": true,
+      "display_frames": 24,
+      "rife": false,
       "foot_lock": true,
       "foot_shifts": [
         1,
@@ -935,23 +799,15 @@
         162.56
       ],
       "columns": 8,
-      "rows": 12,
-      "bytes": 2673206,
+      "rows": 3,
+      "bytes": 637440,
       "loop_start": null,
       "body_center_shift": 1,
       "closest_loop_seam_diff": null,
       "root_lock": {
         "x": 160,
-        "y": 184,
-        "jump_y_free": false,
-        "first_anchor": [
-          162.85845871873707,
-          183.48579117270725
-        ],
-        "last_anchor": [
-          161.75341341403805,
-          184.00987694798917
-        ]
+        "y": 185,
+        "jump_y_free": false
       }
     }
   },
@@ -960,5 +816,9 @@
   "loop_seam_optimized": true,
   "root_locked": true,
   "root_lock_note": "Per-frame alpha-centroid lock to x=160 and first/last-average y; jump keeps vertical motion.",
-  "walk_run_mode": "24 original frames, no RIFE, x-only root lock"
+  "walk_run_mode": "24 original frames, no RIFE, x-only root lock",
+  "hand_actions_mode": "original 24 frames, no RIFE; body root locked except jump vertical",
+  "rife_actions": [
+    "idle"
+  ]
 }

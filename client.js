@@ -16,7 +16,7 @@ window.__ModuleLoader__.load({
     const PANEL_W = 396;
     const PANEL_H = 480;
     const FALLBACK_ASSET_ROOT = '';
-    const ASSET_VERSION = 'v8';
+    const ASSET_VERSION = 'v9';
     const ASSET_ROUTE = 'api/tide-whale-pet/assets';
 
     // -----------------------------------------------------------------------
@@ -26,12 +26,12 @@ window.__ModuleLoader__.load({
       { id: 'idle', frames: 96, fps: 15, loop: true, hold: 0, accent: '#76d7e7' },
       { id: 'walk', frames: 24, fps: 12, loop: true, hold: 0, accent: '#8db7ff' },
       { id: 'run', frames: 24, fps: 12, loop: true, hold: 0, accent: '#ffd17a' },
-      { id: 'jump', frames: 96, fps: 20, loop: false, hold: 300, accent: '#ffd17a' },
-      { id: 'wave', frames: 96, fps: 15, loop: false, hold: 360, accent: '#ffa9cc' },
-      { id: 'sit', frames: 96, fps: 15, loop: true, hold: 0, accent: '#8be0c2' },
-      { id: 'sleep', frames: 96, fps: 15, loop: true, hold: 0, accent: '#a5b5ff' },
-      { id: 'dance', frames: 96, fps: 15, loop: true, hold: 0, accent: '#c7a8ff' },
-      { id: 'surprise', frames: 96, fps: 20, loop: false, hold: 280, accent: '#ffa9cc' },
+      { id: 'jump', frames: 24, fps: 12, loop: false, hold: 300, accent: '#ffd17a' },
+      { id: 'wave', frames: 24, fps: 12, loop: false, hold: 360, accent: '#ffa9cc' },
+      { id: 'sit', frames: 24, fps: 12, loop: true, hold: 0, accent: '#8be0c2' },
+      { id: 'sleep', frames: 24, fps: 12, loop: true, hold: 0, accent: '#a5b5ff' },
+      { id: 'dance', frames: 24, fps: 12, loop: true, hold: 0, accent: '#c7a8ff' },
+      { id: 'surprise', frames: 24, fps: 12, loop: false, hold: 280, accent: '#ffa9cc' },
     ];
     const ACTION_BY_ID = Object.fromEntries(ACTIONS.map((action) => [action.id, action]));
     const AUTO_ACTIONS = ['wave', 'jump', 'surprise'];
@@ -50,8 +50,8 @@ window.__ModuleLoader__.load({
       fullName: 'Xixi · tide whale pet',
       tagline: 'A little blue whale companion for DeepSeek Harness',
       menuTitle: "Xixi's tide theater",
-      menuKicker: 'ready-made art · RIFE · v2.6.1',
-      menuSubtitle: '3 outfits · 27 animations · walk/run 24 source · others 96 RIFE',
+      menuKicker: 'ready-made art · RIFE idle · v2.6.2',
+      menuSubtitle: '3 outfits · 27 animations · idle 96 RIFE · other actions 24 source',
       wardrobe: 'Tide wardrobe',
       actionsLabel: 'Actions',
       nowPlaying: 'Now playing',
@@ -73,7 +73,7 @@ window.__ModuleLoader__.load({
       skin_cape_hint: 'Brown-white cape & gold stars',
       skin_whale: 'Blue whale winter',
       skin_whale_hint: 'Whale hood, fleece trim & scarf',
-      perAction: 'walk/run 24 source · others 96 RIFE',
+      perAction: 'idle 96 RIFE · other actions 24 source',
       a_idle: 'Tilt & blink',
       a_walk: 'Small steps',
       a_run: 'Light run',
@@ -108,8 +108,8 @@ window.__ModuleLoader__.load({
       fullName: '汐汐 · 潮汐小鲸娘',
       tagline: 'DeepSeek Harness 的蓝色鲸鱼桌宠',
       menuTitle: '汐汐的潮汐剧场',
-      menuKicker: '现成素材 · RIFE · v2.6.1',
-      menuSubtitle: '3 套装扮 · 27 段动画 · 走路/跑步 24 原画，其余 96 帧',
+      menuKicker: '现成素材 · idle RIFE · v2.6.2',
+      menuSubtitle: '3 套装扮 · 27 段动画 · idle 96 帧，其余动作 24 原画',
       wardrobe: '潮装衣橱',
       actionsLabel: '动作',
       nowPlaying: '正在播放',
@@ -131,7 +131,7 @@ window.__ModuleLoader__.load({
       skin_cape_hint: '棕白披肩 · 金色星月 · 斗篷',
       skin_whale: '蓝色鲸鱼冬装',
       skin_whale_hint: '鲸鱼兜帽 · 白绒边 · 围巾',
-      perAction: '走路/跑步 24 原画 · 其余 96 帧 RIFE',
+      perAction: 'idle 96 帧 RIFE · 其余动作 24 原画',
       a_idle: '歪头眨眼',
       a_walk: '小碎步走路',
       a_run: '轻快小跑',
@@ -1103,7 +1103,7 @@ window.__ModuleLoader__.load({
           'data-frames': spec.frames,
           'data-source-frames': SOURCE_FRAMES,
           'data-total-source-frames': '648',
-          'data-total-display-frames': '2160',
+          'data-total-display-frames': '864',
           'data-rife': 'true',
           lang: activeLocale,
         },
