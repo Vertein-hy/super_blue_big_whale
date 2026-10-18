@@ -1,0 +1,3 @@
+- insert:
+    - id: tide-whale-pet
+      name: '@local/dsh-tide-whale-pet'
