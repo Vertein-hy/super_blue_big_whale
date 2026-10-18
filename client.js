@@ -16,7 +16,8 @@ window.__ModuleLoader__.load({
     const PANEL_W = 396;
     const PANEL_H = 480;
     const FALLBACK_ASSET_ROOT = '';
-    const ASSET_VERSION = 'v7';
+    const ASSET_VERSION = 'v8';
+    const ASSET_ROUTE = 'api/tide-whale-pet/assets';
 
     // -----------------------------------------------------------------------
     // Provided artwork
@@ -49,7 +50,7 @@ window.__ModuleLoader__.load({
       fullName: 'Xixi · tide whale pet',
       tagline: 'A little blue whale companion for DeepSeek Harness',
       menuTitle: "Xixi's tide theater",
-      menuKicker: 'ready-made art · RIFE · v2.6',
+      menuKicker: 'ready-made art · RIFE · v2.6.1',
       menuSubtitle: '3 outfits · 27 animations · walk/run 24 source · others 96 RIFE',
       wardrobe: 'Tide wardrobe',
       actionsLabel: 'Actions',
@@ -107,7 +108,7 @@ window.__ModuleLoader__.load({
       fullName: '汐汐 · 潮汐小鲸娘',
       tagline: 'DeepSeek Harness 的蓝色鲸鱼桌宠',
       menuTitle: '汐汐的潮汐剧场',
-      menuKicker: '现成素材 · RIFE · v2.6',
+      menuKicker: '现成素材 · RIFE · v2.6.1',
       menuSubtitle: '3 套装扮 · 27 段动画 · 走路/跑步 24 原画，其余 96 帧',
       wardrobe: '潮装衣橱',
       actionsLabel: '动作',
@@ -680,16 +681,29 @@ window.__ModuleLoader__.load({
       return new URL(`api/file?path=${encodeURIComponent(absPath)}&v=${ASSET_VERSION}`, document.baseURI).href;
     }
 
+    function directAssetUrl(relative) {
+      return new URL(`${ASSET_ROUTE}/${relative}?v=${ASSET_VERSION}`, document.baseURI).href;
+    }
+
     function spriteUrl(skin, action) {
-      return fileUrl(`${assetRoot()}/${skin}/${action}.webp`);
+      const root = assetRoot();
+      return root
+        ? fileUrl(`${root}/${skin}/${action}.webp`)
+        : directAssetUrl(`${skin}/${action}.webp`);
     }
 
     function thumbUrl(skin, action) {
-      return fileUrl(`${assetRoot()}/thumbs/${skin}/${action}.webp`);
+      const root = assetRoot();
+      return root
+        ? fileUrl(`${root}/thumbs/${skin}/${action}.webp`)
+        : directAssetUrl(`thumbs/${skin}/${action}.webp`);
     }
 
     function portraitUrl(skin) {
-      return fileUrl(`${assetRoot()}/portraits/${skin}.webp`);
+      const root = assetRoot();
+      return root
+        ? fileUrl(`${root}/portraits/${skin}.webp`)
+        : directAssetUrl(`portraits/${skin}.webp`);
     }
 
     const IMAGE_CACHE = new Map();

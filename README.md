@@ -21,7 +21,8 @@ The character artwork comes from the provided **648-frame sprite pack** (`3 outf
 - **Walk / run use the original 24 frames**, not RIFE, so the legs keep crisp stepping instead of being warped by interpolation.
 - The other actions use RIFE 4.9 to expand 24 source frames to **96 frames**, with a 15fps or 20fps presentation.
 - Idle sheet is pinned in the client cache; returning from a one-shot does not flash a loading card.
-- Assets are served through Harness's authenticated `/api/file` route. No build step.
+- Assets are served either through Harness's authenticated `/api/file` route (when the Host's asset-root injection is present) or through the plugin's own read-only `/api/tide-whale-pet/assets/...` route on first load.
+- The Host route is whitelisted to static `.webp`/`.json` files under `assets/`; it is not a general file server. No build step.
 
 ## Install
 
@@ -30,8 +31,8 @@ The character artwork comes from the provided **648-frame sprite pack** (`3 outf
    git clone https://github.com/Vertein-hy/super_blue_big_whale.git
    ```
 2. In DeepSeek Harness's plugin manager, install the cloned folder as a local bundle. The bundle package is `@local/dsh-tide-whale-pet`; its package manifest and `cordis.patch.yml` are included.
-3. **Reload the page once** after installation. The Host half injects the absolute asset directory into the page on reload; this is required for the sprite sheets to load.
-4. If the pet shows an asset-load error, confirm that `assets/` exists and reload once more.
+3. A page reload is recommended. The Host registers a small read-only asset route at `/api/tide-whale-pet/assets/...` for first loads; after a reload the Client can also use the authenticated `/api/file` route via the injected absolute asset directory.
+4. If the pet shows an asset-load error, click **重试** once (the route is registered as soon as the Host half applies), or reload again.
 
 There is no npm publish and no compile step. The client is a plain Harness client bundle.
 
@@ -79,7 +80,7 @@ For every action, the first and last frames are used to establish a fixed target
 │   ├── thumbs/                           # action-menu thumbnails
 │   └── rife-manifest.json                # frame counts, loop seams, offsets
 ├── client.js                             # client overlay, canvas player, panel
-├── index.js                              # host half, asset-root injection
+├── index.js                              # host half, asset route + injection
 ├── cordis.patch.yml                      # bundle entry
 ├── locale/{zh,en}.json                   # localization metadata
 ├── icon.png
@@ -101,8 +102,9 @@ The 96-frame variants were generated offline with the **RIFE 4.9** ONNX model; t
 
 - `client.js` is a plain `window.__ModuleLoader__` client bundle; it registers itself in `shell.overlay`.
 - `index.js` listens to `webserver/index-inject` and publishes `__DSH_TIDE_PET_ASSET_ROOT__`.
-- `client.js` has no hard-coded local asset path. If the Host injection is absent, the client shows an asset-load error with a retry button rather than silently using a developer path.
-- Assets are loaded with the authenticated `/api/file?path=...` route, which also works inside `dsh-app://app/`.
+- `index.js` also registers a read-only prefix route `/api/tide-whale-pet/assets` that safely serves WebP/JSON files from `assets/`. It only allows GET/HEAD, a fixed path pattern, and no directory traversal.
+- `client.js` uses the injected absolute root with `/api/file` when available; otherwise it falls back to the read-only asset route. If both fail, it shows an asset-load error with a retry button instead of silently using a developer path.
+- Assets are loaded with the authenticated `/api/file?path=...` route, which also works inside `dsh-app://app/`; the direct route is used for first loads.
 
 ## License
 
