@@ -54,16 +54,16 @@ Preferences (position, outfit, auto-play) are stored in `localStorage` under `ds
 | Action | Source frames | Playback frames | Mode | FPS | Duration |
 | --- | ---: | ---: | --- | ---: | ---: |
 | idle | 24 | 96 | loop | 15 | 6.4 s |
-| walk | 24 | 24 | loop | 12 | 2.0 s |
-| run | 24 | 24 | loop | 12 | 2.0 s |
-| jump | 24 | 24 | once | 12 | 2.0 s |
-| wave | 24 | 24 | once | 12 | 2.0 s |
-| sit | 24 | 24 | loop | 12 | 2.0 s |
-| sleep | 24 | 24 | loop | 12 | 2.0 s |
-| dance | 24 | 24 | loop | 12 | 2.0 s |
-| surprise | 24 | 24 | once | 12 | 2.0 s |
+| walk | 24 | 24 | loop | 6 | 4.0 s |
+| run | 24 | 24 | loop | 6 | 4.0 s |
+| jump | 24 | 24 | once | 6 | 4.0 s |
+| wave | 24 | 24 | once | 6 | 4.0 s |
+| sit | 24 | 24 | loop | 6 | 4.0 s |
+| sleep | 24 | 24 | loop | 6 | 4.0 s |
+| dance | 24 | 24 | loop | 6 | 4.0 s |
+| surprise | 24 | 24 | once | 6 | 4.0 s |
 
-Only idle is interpolated. The eight gesture actions deliberately stay at 24 frames because RIFE duplicates or warps hands and legs when a limb crosses the body (the clearest case is the cover-face surprise action). Crisp original limbs are preferable to a higher frame count with extra hands.
+Only idle is interpolated. The eight gesture actions deliberately stay at 24 frames because RIFE duplicates or warps hands and legs when a limb crosses the body (the clearest case is the cover-face surprise action). To avoid making those actions feel faster after dropping the in-betweens, they play at **6fps (4.0 s per cycle)**. This is intentionally slower and choppier than the 96-frame idle, but the limbs stay correct.
 
 ### Root calibration
 
